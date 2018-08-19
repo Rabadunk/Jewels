@@ -7,6 +7,18 @@ button.addEventListener("click", async function() {
 		}]
 	}).then(device => {
 		console.log("Got device: ", device.name);
-		console.log("id: ", device.id);
-	});
+		document.getElementById("output").innerHTML = "DeviceId:" + device.id;
+	}).then(characteristic => {
+  // Set up event listener for when characteristic value changes.
+  characteristic.addEventListener('characteristicvaluechanged',
+                                  handleBatteryLevelChanged);
+  // Reading Battery Level...
+  return characteristic.readValue();
+}).catch(error => { console.log(error); });
 });
+
+
+function handleBatteryLevelChanged(event) {
+  let batteryLevel = event.target.value.getUint8(0);
+  console.log('Battery percentage is ' + batteryLevel);
+}
