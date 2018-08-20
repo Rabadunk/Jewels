@@ -7,8 +7,8 @@ button.addEventListener('click', function() {
 
 	navigator.bluetooth.requestDevice({ filters: [{ services: [deviceService] }] })
 	    .then(device => device.gatt.connect())
-	    .then(server => server.getPrimaryService())
-	    .then(service => service.getCharacteristic())
+	    .then(server => server.getPrimaryService(deviceService))
+	    .then(service => service.getCharacteristic(deviceCharacter))
         .then(characteristic => characteristic.startNotifications())
 	    .then(characteristic => {
 			characteristic.addEventListener('characteristicvaluechanged',
