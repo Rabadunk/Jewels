@@ -7,8 +7,8 @@ button.addEventListener('click', function() {
 
 	navigator.bluetooth.requestDevice({ filters: [{ services: [deviceService] }] })
 	    .then(device => device.gatt.connect())
-	    .then(server => server.getPrimaryService(deviceService))
-	    .then(service => service.getCharacteristic(deviceCharacter))
+	    .then(server => server.getPrimaryService())
+	    .then(service => service.getCharacteristic())
 	    .then(characteristic => {
 			characteristic.addEventListener('characteristicvaluechanged',
 			handleValueChange);
@@ -18,6 +18,5 @@ button.addEventListener('click', function() {
 
 function handleValueChange(event){
 	var value = event.target.value.getUint8(0);
-	document.getElementId("#output").innerHTML = value;
-	console.log('Our value is: ', value);
+    console.log('Our value is: ', value);
 }
