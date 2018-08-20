@@ -1,18 +1,17 @@
-const service = 0xFFE0;
-const characteristic = 0xFFE1;
+const deviceService = 0xFFE0;
+const deviceCharacter = 0xFFE1;
 const sparky = 'C03';
 const button = document.querySelector('#button');
 
 button.addEventListener('click', function() {
 
-	navigator.bluetooth.requestDevice({ filters: [{ services: [service] }] })
+	navigator.bluetooth.requestDevice({ filters: [{ services: [deviceService] }] })
 	    .then(device => device.gatt.connect())
-	    .then(server => server.getPrimaryService(service))
-	    .then(service => service.getCharacteristic(characteristic))
+	    .then(server => server.getPrimaryService(deviceService))
+	    .then(service => service.getCharacteristic(deviceCharacter))
 	    .then(characteristic => {
-	        characteristicInstance = characteristic;
-					characteristic.addEventListener('characteristicvaluechanged',
-					        handleValueChange);
+			characteristic.addEventListener('characteristicvaluechanged',
+			handleValueChange);
 	    })
 	.catch(error => { console.log("This is error: ", error); });
 });
