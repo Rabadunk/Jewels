@@ -9,7 +9,7 @@ button.addEventListener('click', function() {
 		console.log('id:', device.id);
 		return device.gatt.connect();
 	}).then(characteristic => {
-		console.log(characteristic.readValue());
+		console.log("Reading value");
 		return characteristic.readValue();
 })
 });
