@@ -7,6 +7,7 @@ button.addEventListener('click', function() {
 	}).then(device => {
 		console.log('Got device:', device.name);
 		console.log('id:', device.id);
+		return device.gatt.connect();
 	}).then(characteristic => {
 		console.log(characteristic.readValue());
 		return characteristic.readValue();
