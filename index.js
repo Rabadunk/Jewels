@@ -10,7 +10,6 @@ button.addEventListener('click', function() {
 	    .then(service => service.getCharacteristic(characteristic))
 	    .then(characteristic => {
 	        characteristicInstance = characteristic;
-		setInterval(updateSpeed,200); //send commands every 200ms
 			console.log("reading value");
 	  	return characteristic.readValue();
 	    })
