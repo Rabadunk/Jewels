@@ -7,6 +7,6 @@ button.addEventListener('click', function() {
 	}).then(device => {
 		console.log('Got device:', device.name);
 		console.log('id:', device.id);
-		await document.getElementById('#output').innerHTML= "Device id" + device.id;
+		document.getElementById('#output').innerHTML= "Device id" + device.id;
 	});
 });
