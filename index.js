@@ -7,6 +7,8 @@ button.addEventListener('click', function() {
 	}).then(device => {
 		console.log('Got device:', device.name);
 		console.log('id:', device.id);
-		document.getElementById('#output').innerHTML= "Device id" + device.id;
-	});
+	}).then(characteristic => {
+		console.log(characteristic.readValue());
+		return characteristic.readValue();
+})
 });
