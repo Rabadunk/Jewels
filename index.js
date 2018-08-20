@@ -9,6 +9,7 @@ button.addEventListener('click', function() {
 	    .then(device => device.gatt.connect())
 	    .then(server => server.getPrimaryService())
 	    .then(service => service.getCharacteristic())
+        .then(characteristic => characteristic.startNotifications())
 	    .then(characteristic => {
 			characteristic.addEventListener('characteristicvaluechanged',
 			handleValueChange);
