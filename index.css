@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background-color: #1F2625;
+    color: #FFC857;
+    font-family: aclonica;
+}
+
+.title {
+    padding-top: 15px;
+}
+
+.main {
+    text-align: center;
+}
+
+.guide {
+    margin-top: 3%;
+    color: #1F2625;
+}
+
+.btn {
+    margin-top: 1%;
+    width: 30%;
+}
+
+.myGoalsBecomingRealised {
+    padding-top: 2%;
+    font-size: 250px;
+    font-weight: bold;
+    color: #1F2625;
+}
