@@ -19,6 +19,5 @@ button.addEventListener('click', function() {
 
 function handleValueChange(event){
 	var value = event.target.value.getUint8(0);
-    document.getElementById("#output").innerHTML = value;
-    console.log('Our value is: ', value);
+    document.getElementById("output").innerHTML = value;
 }
