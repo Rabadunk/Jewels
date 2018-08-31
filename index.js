@@ -38,5 +38,6 @@ function handleValueChange(event){
 		console.log(data);
 		document.getElementById("output").innerHTML = data[0] + "." + data[1] + data[2];
 		data = [];
+		data.push(value);
 	}
 }
