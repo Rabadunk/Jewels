@@ -8,7 +8,8 @@ const deviceCharacter = 0xFFE1;
 const sparky = 'C03';
 
 //Data array
-
+var data = [];
+var index = 0;
 
 
 // When button is clicked, start bluetooth navigator.
@@ -30,8 +31,11 @@ button.addEventListener('click', function() {
 
 // Function for sending data to front end.
 function handleValueChange(event){
-	var value1 = event.target.value.getUint8(0)
-	var value2 = event.target.value.getUint8(1)
-	var value3 = event.target.value.getUint8(2);
-    document.getElementById("output").innerHTML = value1 + "." + value2 + value3;
+	var value = event.target.value.getUint8(0);
+	if(data.length < 4) {
+		data.push(value);
+	} else {
+		document.getElementById("output").innerHTML = data[0] + "." + data[1] + data[2];
+		data = [];
+	}
 }
