@@ -31,7 +31,7 @@ button.addEventListener('click', function() {
 // Function for sending data to front end.
 function handleValueChange(event){
 	var value = event.target.value.getUint8(0);
-	if(data.length < 4) {
+	if(data.length < 3) {
 		data.push(value);
 		console.log(data);
 	} else {
