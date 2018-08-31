@@ -33,5 +33,5 @@ function handleValueChange(event){
 	var value1 = event.target.value.getUint8(0)
 	var value2 = event.target.value.getUint8(1)
 	var value3 = event.target.value.getUint8(2);
-    document.getElementById("output").innerHTML = value + "." + value2 + value3;
+    document.getElementById("output").innerHTML = value1 + "." + value2 + value3;
 }
