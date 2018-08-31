@@ -7,6 +7,9 @@ const deviceCharacter = 0xFFE1;
 //Name of our HM10 bluetooth module
 const sparky = 'C03';
 
+//Data array
+
+
 
 // When button is clicked, start bluetooth navigator.
 const button = document.querySelector('#button');
@@ -27,6 +30,8 @@ button.addEventListener('click', function() {
 
 // Function for sending data to front end.
 function handleValueChange(event){
-	var value = event.target.value.getUint8(0);
-    document.getElementById("output").innerHTML = value;
+	var value1 = event.target.value.getUint8(0)
+	var value2 = event.target.value.getUint8(1)
+	var value3 = event.target.value.getUint8(2);
+    document.getElementById("output").innerHTML = value + "." + value2 + value3;
 }
