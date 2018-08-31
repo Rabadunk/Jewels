@@ -31,12 +31,12 @@ button.addEventListener('click', function() {
 // Function for sending data to front end.
 function handleValueChange(event){
 	var value = event.target.value.getUint8(0);
-	if(data.length < 3) {
+	if(data.length < 4) {
 		data.push(value);
 		console.log(data);
 	} else {
 		console.log(data);
-		document.getElementById("output").innerHTML = data[0] + "." + data[1] + data[2];
+		document.getElementById("output").innerHTML = data[0] + "." + data[1] + data[2] + data[3];
 		data = [];
 		data.push(value);
 	}
