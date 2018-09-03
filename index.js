@@ -9,6 +9,8 @@ const sparky = 'C03';
 
 //Data array
 var data = [];
+var datapoint = 0;
+var datahold = '';
 
 
 // When button is clicked, start bluetooth navigator.
@@ -35,8 +37,10 @@ function handleValueChange(event){
 		data.push(value);
 		console.log(data);
 	} else {
+		datahold = data[0] + "." + data[1] + data[2] + data[3];
+		datapoint = parseFloat(datahold);
 		console.log(data);
-		document.getElementById("output").innerHTML = data[0] + "." + data[1] + data[2] + data[3];
+		document.getElementById("output").innerHTML = datahold;
 		data = [];
 		data.push(value);
 	}
