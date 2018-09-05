@@ -67,3 +67,25 @@ body {
     color: black;
     width: 100%;
 }
+
+
+@media (max-width: 991.98px) {
+
+    .main {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .content-wrapper {
+        padding-top: 15%;
+    }
+
+    .main-logo {
+        width: 40%;
+        height: auto;
+    }
+
+}
