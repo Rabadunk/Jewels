@@ -8,6 +8,7 @@ Highcharts.setOptions({
 Highcharts.chart('firstHighChart', {
   chart: {
     type: 'spline',
+    backgroundColor: "snow",
     animation: Highcharts.svg, // don't animate in old IE
     marginRight: 10,
     events: {
@@ -23,8 +24,20 @@ Highcharts.chart('firstHighChart', {
       }
     }
   },
+  colorAxis: {
+      lineColor: 'black',
+      minorGridLineColor: 'black'
+  },
+  plotOptions: {
+      spline: {
+          color: '#61e294'
+      }
+  },
   title: {
-    text: 'Live random data'
+    text: 'Random data from ATMega328pb',
+    style: {
+        "color": "black",
+    }
   },
   xAxis: {
     type: 'datetime',
@@ -32,7 +45,7 @@ Highcharts.chart('firstHighChart', {
   },
   yAxis: {
     title: {
-      text: 'Value'
+      text: 'Voltage'
     },
     plotLines: [{
       value: 0,
