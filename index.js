@@ -33,11 +33,11 @@ button.addEventListener('click', function() {
 // Function for sending data to front end.
 function handleValueChange(event){
 	var value = event.target.value.getUint8(0);
-	if(data.length < 4) {
+	if(data.length < 3) {
 		data.push(value);
 		console.log(data);
 	} else {
-		datahold = data[0] + "." + data[1] + data[2] + data[3];
+		datahold = convert_to_volts(data[0]) + "." + convert_to_volts(data[1]) + convert_to_volts(data[2]);
 		datapoint = parseFloat(datahold);
 		console.log(data);
 		document.getElementById("output").innerHTML = datahold;
