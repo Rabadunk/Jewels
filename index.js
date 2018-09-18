@@ -35,8 +35,9 @@ function handleValueChange(event){
 	var value = event.target.value.getUint8(0);
 	if(data.length < 3) {
 		data.push(value);
+		console.log(data);
 	} else {
-		datahold = data[0] + "." + data[1] + data[2];
+		datahold = convert_to_volts1(data[0]) + "." + convert_to_volts2(data[1]) + convert_to_volts3(data[2]);
 		datapoint = parseFloat(datahold);
 		console.log(data);
 		document.getElementById("output").innerHTML = datahold;
