@@ -5,10 +5,10 @@ Highcharts.setOptions({
   }
 });
 
-Highcharts.chart('firstHighChart', {
+Highcharts.chart('powerChart', {
   chart: {
     type: 'spline',
-    backgroundColor: "snow",
+    backgroundColor: "white",
     animation: Highcharts.svg, // don't animate in old IE
     marginRight: 10,
     events: {
@@ -18,7 +18,7 @@ Highcharts.chart('firstHighChart', {
         var series = this.series[0];
         setInterval(function () {
           var x = (new Date()).getTime(), // current time
-            y = datapoint;
+            y = powerpoint;
           series.addPoint([x, y], true, true);
         }, 1000);
       }
@@ -34,7 +34,7 @@ Highcharts.chart('firstHighChart', {
       }
   },
   title: {
-    text: 'Random data from ATMega328pb',
+    text: 'Power values over time',
     style: {
         "color": "black",
     }
@@ -45,7 +45,7 @@ Highcharts.chart('firstHighChart', {
   },
   yAxis: {
     title: {
-      text: 'Voltage'
+      text: 'Power (Watts)'
     },
     plotLines: [{
       value: 0,
@@ -67,7 +67,7 @@ Highcharts.chart('firstHighChart', {
     enabled: false
   },
   series: [{
-    name: 'Random data',
+    name: 'Power',
     data: (function () {
       // generate an array of random data
       var data = [],
