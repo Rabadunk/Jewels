@@ -18,6 +18,28 @@ As mentioned previously, the goal of this project was to design and implement a 
 
 The wireless energy monitor, that wwas be developed during the course, consisted of two subsystems, a signal  measurement  unit  and  a  base  station,  which communicated  with  each  other  wirelessly  through Bluetooth. Images of both can be seen below.
 
+### Base Station
+<img src="img/fpga1.jpg" width=100% height=auto style="margin:0 auto">
+
+### Measurement Unit
+<img src="img/board1.jpg" width=100% height=auto>
+
 ## Energy Monitor Web App
 
 We were able to attain two bonus marks if we completed the development  of  a  mobile  application to  display  the  energy usage data transmitted by the BLE module of the measurement unit. The application was required to have an intuitive user interface to allow users to connect with the measurement unit and see real-time power, voltage and current. Our application is hosted on github pages, the link to which is above, but images showing the app working can be seen below.
+
+### Intuitive interface to connect to measurement unit
+<p align="center">
+  <img src="img/app1.jpg" width=50% height=auto>
+</p>
+
+### Displays change in power consumption over time
+<p align="center">
+  <img src="img/app2.jpg" width=50% height=auto>
+</p>
+
+
+### Displays real-time power, voltage and current
+<p align="center">
+  <img src="img/app3.jpg" width=50% height=auto>
+</p>
