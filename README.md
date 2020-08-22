@@ -33,7 +33,7 @@ We were able to attain two bonus marks if we completed the development  of  a  m
   <img src="img/app1.jpg" width=50% height=auto>
 </p>
 
-### Displays change in power consumption over time
+### User can turn measurement unit on or off, display shows power consumption over time
 <p align="center">
   <img src="img/app2.jpg" width=50% height=auto>
 </p>
